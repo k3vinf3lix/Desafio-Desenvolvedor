@@ -1,0 +1,19 @@
+
++----------------+        +--------------------+
+|   Estados      |        |    Tipos_Telefone  |
++----------------+        +--------------------+
+| estado_id (PK) |        | tipo_telefone_id (PK)|
+| sigla          |        | descricao           |
+| nome           |        +--------------------+
++----------------+                   
+        |                              
+        | (1:N)                         
+        |                             
++----------------+        +-------------------+  
+|   Clientes     |        |    Telefones      |  
++----------------+        +-------------------+  
+| cliente_id (PK)|        | telefone_id (PK)  |
+| razao_social   |        | numero_telefone   |
+| estado_id (FK) |        | tipo_telefone_id (FK)|
++----------------+        | cliente_id (FK)   |
+                          +-------------------+  
